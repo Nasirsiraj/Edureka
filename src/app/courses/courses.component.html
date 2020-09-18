@@ -1,0 +1,25 @@
+<br><br>
+<div class="jumbotron" style="padding: 14px 4px">
+  <h1
+  class="text-center">
+    Courses at Edureka</h1>
+</div>
+<div>
+  <ul
+    class="courses"
+    *ngFor="let course of courses"
+    style="list-style: none">
+    <li
+      (click)="onSelect(course)">
+      <span
+        class="badge">
+        {{course.id}}
+      </span>
+      {{course.name}}
+    </li>
+  </ul>
+</div>
+<br>
+<app-c-details [course]="selectedCourse"></app-c-details>
+<br><br><br>
+<br><br><br>
